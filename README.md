@@ -2,6 +2,10 @@
 
 This repository contains the code for the paper: [STN-OCR: A single Neural Network for Text Detection and Text Recognition](https://arxiv.org/abs/1707.08831)
 
+# Please note that we refined our approach and released new source code. You can find the code [here](https://github.com/Bartzi/see)
+Please use the new code, if you want to experiment with FSNS like data and our approach. It should also be easy to redo the text recognition experiments with the new code, although we did not release any code for that.
+
+
 # Structure of the repository
 
 The folder `datasets` contains code related to datasets used in the paper.
@@ -32,7 +36,7 @@ You can use this code to train models for three different tasks.
 
 ## SVHN House Number Recognition
 
-The file `train_svhn.py` is the entry point for training a network using our [purpose build svhn datasets](https://bartzi.de/research/see).
+The file `train_svhn.py` is the entry point for training a network using our [purpose build svhn datasets](https://bartzi.de/research/stn-ocr).
 The file as such is ready to train a network capable of finding a single house number placed randomly on an image.
 
 Example:
@@ -125,15 +129,13 @@ This Code is licensed under the GPLv3 license. Please see further details in LIC
 
 If you are using this Code please cite the following publication:
 
-    @article{stn-ocr,
-    Author = {Christian Bartz, Haojin Yang, Christoph Meinel},
-    journal = {ArXiv e-prints},
-    archivePrefix = "arXiv",
-    eprint = {1707.08831},
-    Title = {STN-OCR: A single Neural Network for Text Detection and Text Recognition},
-    Year = {2017}
+    @article{bartz2017stn,
+      title={STN-OCR: A single Neural Network for Text Detection and Text Recognition},
+      author={Bartz, Christian and Yang, Haojin and Meinel, Christoph},
+      journal={arXiv preprint arXiv:1707.08831},
+      year={2017}
     }
 
-# A short notice on code quality
+# A short note on code quality
 
 The code contains a huge amount of workarounds around MXNet, as we were not able to find any easier way to do what we wanted to do. If you know a better way, pease let us know, as we would like to have code that is better understandable, as now.
